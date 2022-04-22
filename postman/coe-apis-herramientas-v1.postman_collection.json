@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "5910963c-24ea-4ae6-bca8-ad11ad74e0ed",
+		"name": "coe-apis-herramientas-v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "robustecimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"*numeroCliente\": \"99493435\",\r\n    \"*numeroCuenta\": \"21264597864562135456\",\r\n    \"*supicu\": \"79436cbeb2f248dc920237047504b72f\",\r\n    \"*autenticacion\": {\r\n        \"*token\": \"fac2ac44565db5312fb407c3c9482d04\",\r\n        \"*otp\": \"57465386\"\r\n    },\r\n    \"*alcancia\": {\r\n        \"*id\": \"000000006\",\r\n        \"*nombre\": \"Terreno\",\r\n        \"*monto\": \"800,000\",\r\n        \"*notificar\": true,\r\n        \"*ubicacion\": {\r\n            \"*latitud\": \"99304762\",\r\n            \"*longitud\": \"19760562\"\r\n        },\r\n        \"*plazo\": {\r\n            \"*duracion\": \"10\",\r\n            \"unidadTiempo\": \"Meses\",\r\n            \"*retencion\": {\r\n            \"*monto\": \"8000\",\r\n            \"*idPeriodicidad\": \"15\"\r\n            }\r\n        },\r\n        \"*periodo\": {\r\n            \"*fechaFinal\": \"10-11-2021\"\r\n        }\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/herramientas/v1/robustecimiento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"herramientas",
+						"v1",
+						"robustecimiento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rsa-cifrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accesoPublico\": \"{{llavePublica}}\",\r\n    \"requestBody\":{\r\n        \"*numeroEmpleado\": \"211027\",\r\n        \"*idCentroCostos\": \"102033\",\r\n        \"*numeroSerie\": \"F9FW90LLGHMN\",\r\n        \"*activoFijo\": \"GS1491855\",\r\n        \"idTiposHerramienta\": [\r\n            \"1\"\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/herramientas/v1/rsa/cifrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"herramientas",
+						"v1",
+						"rsa",
+						"cifrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rsa-descifrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accesoPrivado\": \"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\",\r\n    \"requestBody\":{\r\n        \"paginacion\": {\r\n            \"pagina\": 1,\r\n            \"totalRegistrosPorPagina\": 10\r\n        },\r\n        \"*idCentroLogistico\": \"JsBRcWDzXBAmsVfhI9KrpPsEIPrRpRr2MuDVKzNEZvGr5B9BpTadlzwGKV2vcBfckNhDLklBIdEf0WDa7S2UaGz43SxnOXxO+svfNcfOxg7xThFlhX1EL8qOYbtPqh8veeXY6LVYOcDwMtZlwZU1dvQtH7qaluWCU1hewcJOLOxVMPPhxXuBNYLLX5lFhUlmrPoQ1HMUSxdqWigcPGRcJainaut3CQRzJIv2gq8A0Bnf7XpQL3N46KDChBXiMhnlj18uWIzKBwu3lDs+FRmYkEZV0GdeU7Kxx3IwIQkxlBiR0VRNgPjNLzWQMESl252Zs7C4GLlSVHt9IU3690jEN+1yN3vZpI6VaJRW/PoR4cMtHTbM6CCQXswjDGulTAsjSq+KxJX76PRy0CeF64zOP96F9NwQ2XmgA28ZV5sl2y/lmoQwcrwUuERjsMfUhnzfD4oQ+TKo/NGvE4vpmTyhXZuuio+7szJmYitZWbY62APJrXG0grHtWvDCeNkDA48wTKb0oxjm3V3oJtZOAf8EYHOhDso0ZhLolbenQdsh0HvrV7JIPDtegHPQBGRKEiSr5hMoynQNeJPyFmu+gH98F+fIXsM5jo6tgtSkZtsplHLnSqXYWW10TgMD9C7q+/Um/z+XxjqFtXy7nUFF9AJ3a9W8hNnFoRrRlHSSeuSdC94=\",\r\n        \"*idAlmacen\": \"wiLYccBl4NLC6/kEj4WkZ1bOrQ99w1VrFeksawPpkUV2hdKrlbLiEiD4nazBLwIrRbmyn/KfZoNjHUBZZDy6LMqWH9cVqLsbhSsG2R34DSYQldx6BcRAIbE0hqMYHSM7w10Z+BtCCfZMuYkE90mfgsUSyvctF5a9plK5Z4mjjQLiwKeGD7rF6qCw56CXF6OLP4gIKreOHf1VCaC70ZtXRrmljEMasu9GDDGC5LBE6I3N6HxNh2MoUnp2aEabw2ivZEYeEZRb9ELj4G2twomo2hJF9XIHDKKQdAWDqXKfEC3Sa1HPYk3R6q0jfmMGEg1tKArJBhiTe6XHiutxaZ+ncN7QlU4WvQ51aogNaRhDfow07wHToRi4NZWhxXCbE1pAE+adi64lA8/5udnmaUrM0YDqsfn37a7ZkbGGBp0rzN6T6sR0OFEzy4IbZZ7pK6gs/mhYXHtNVsyGKCdyQD+jn8nYhugX7rPzQF/EFAKV13rK99m0fhtrvnSWHarAZevqYRyqL+HKU2vEzJmDhR35FrcpyM99bouk8XDM/1i1ActCTY4+qa2gzmT2GD+0aSyp0Z2Rv5u67INqiu7AUhatJAnEHph79iha0iPIPla93TxSWryObPoh4vWd9DsHJCtmCd5A8hAiagKvXuiMmVkFa6vkBErVL46RPSNxJ6b/Mrk=\",\r\n        \"*idMaterial\": \"x4upYa2G4LH+tQXIb8UbpuVFaLSxBWg4MjgBQ+Szh0B8G+9Ohu6ewYBWDmj40LTonFI/7O+JAhTeTOLzH6+1wkPvnfEeWrh0Fy8sUePHTmAAeNS1KYHgUYF8yP6hvz8CEUeKw88kDwOmihGw4umiYepVldYMZLF1eXW7tAD0YEgyOm3NqUfVduPmnlVQI44H6W4TDELrxuRcdHKP+BAs/casl/QqDP5U57oLVfNYB72Sx4AHy2V6H5RR7t/QFUaqIjWdtkDBNrclLcLGXcPu3/WoiQxhvN+XA1RZJN2puNfW3tHhfTa/658uXRK27LxqCuwzLVEq9ZNQTk2xA1/y8PhjhFXvFPdedmaYgtHqBDSfRUjyNggFudbcmAA3TzCWYGKkQTaOj2Er+udFnb70k8Gw4sdqO9G9PuRBQm0ksAsh5ujpCkDCpaTwG5zPJ5LoAuYNPaGPvR6+BtHcyGC3tPxWfIA83cU/Nu1f3LJRQBYt9q5P8sJHmzi9fN2b8SL5DmKC2p+rt6OoNzsE02GQzh9Bt/l63DreAsYaEq3SnzF1euDcPYMitG6Ww9kkLGppJl0VbKPC+01XSwKjlYDlm3Sa699/hVZk9M7aDwhHvmupGnLpyzvmAa297Fm0Qf1rkUvC8DlJXjs/d2jgee64BIwKAgsSaxiqGK1clSqGi1I=\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/herramientas/v1/rsa/descifrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"herramientas",
+						"v1",
+						"rsa",
+						"descifrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aes-cifrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accesoSimetrico\": \"Do3VJxoVc9QBzMpk6/Vhh7xH0pqd+784Sva9BjNR6YY=\",\r\n    \"codigoHash\": \"m0sfw6fhuU8vhvJoxZ0r6ZWFZmp26kRh97eihPJntfI=\",\r\n    \"requestBody\":{\r\n        \"paginacion\" : {\r\n            \"pagina\": 1,\r\n            \"totalRegistrosPorPagina\": 10\r\n        },\r\n        \"idCentroLogistico\": \"E001\",\r\n        \"*idAlmacen\": \"E001\",\r\n        \"*idMaterial\": \"16539\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/herramientas/v1/aes/cifrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"herramientas",
+						"v1",
+						"aes",
+						"cifrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aes-descifrar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(pm.environment.set(\"llavePublica\", pm.response.json().descifradoAes.accesoPublico))\r",
+							"pm.test(pm.environment.set(\"llavePrivada\", pm.response.json().descifradoAes.accesoPrivado))\r",
+							"pm.test(pm.environment.set(\"aesKey\", pm.response.json().descifradoAes.accesoSimetrico))\r",
+							"pm.test(pm.environment.set(\"hash\", pm.response.json().descifradoAes.codigoAutentificacionHash))\r",
+							"pm.environment.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accesoSimetrico\": \"Do3VJxoVc9QBzMpk6/Vhh7xH0pqd+784Sva9BjNR6YY=\",\r\n    \"codigoHash\": \"m0sfw6fhuU8vhvJoxZ0r6ZWFZmp26kRh97eihPJntfI=\",\r\n    \"requestBody\":{\r\n        \"idAcceso\": \"{{idAcceso}}\",\r\n        \"*accesoPublico\": \"{{accesoPublico}}\",\r\n        \"*accesoPrivado\": \"{{accesoPrivado}}\",\r\n        \"*accesoSimetrico\": \"{{accesoSimetrico}}\",\r\n        \"*codigoAutentificacionHash\": \"{{codigoHash}}\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/herramientas/v1/aes/descifrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"herramientas",
+						"v1",
+						"aes",
+						"descifrar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
