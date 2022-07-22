@@ -1,0 +1,39 @@
+<%- include('template/cabecera', {tituloWeb: titulo}) %>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label"> <span class="fw-bold">Headers</span> <br> <span>Ejemplo: | x-header1 | x-header2 |</span> </label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"> <span class="fw-bold">JSON</span> <br> <span>Los atributos requeridos se indican con un asterisco al principio</span> <span class="fw-bold">"*atributo": "valor"</span> </label>
+                            <code><textarea id="bodyRequest" class="form-control" rows="13"></textarea></code>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button id="btnRobustecimiento" class="btn btn-primary" type="button">Robustecer</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="mb-3 text-center">
+                        <label for="resultadoRobustecimiento" class="form-label"> <span class="fw-bold fs-3">Robustecimiento</span></label>
+                        <textarea id="resultadoRobustecimiento" class="form-control" rows="22" wrap="off"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container text-center">
+        <p class="fw-bold">&copy; 2022 Daniel Sotelo Isidro</p>
+    </footer>
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/consumo-api.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/robustecimiento.js"></script>
+</body>
+</html>

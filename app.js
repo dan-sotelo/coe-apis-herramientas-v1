@@ -4,6 +4,7 @@ const app = express();
 require('dotenv').config();
 const cors = require('cors');
 const middUsuarios = require('./middlewares/midd.users');
+const vistaApp = require('./app/view/vista.app');
 const vistaPrincipal = require('./app/view/vista.principal');
 
 // Confiuraciones globales
@@ -29,3 +30,4 @@ iniciarServidor();
 
 // Inicializar las rutas del servidor
 vistaPrincipal(app);
+vistaApp(app);

@@ -4,7 +4,7 @@ const rateLimit = require('express-rate-limit');
 // Límite de las consultas por usuario
 const requestLimit = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 100,
+    max: 600,
     message: 'Excedio la cantidad máxima de consultas'
 });
 

@@ -1,0 +1,23 @@
+<%- include('template/cabecera', {tituloWeb: titulo}) %>
+    <main>
+        <div id="catalogoServicios" class="row p-2 m-2 text-center">
+            <!-- templateServicio -->
+        </div>
+    </main>
+    <footer class="container text-center">
+        <p class="fw-bold">&copy; 2022 Daniel Sotelo Isidro</p>
+    </footer>
+
+    <!-- Templates -->
+    <template id="templateServicio">
+        <%- include ('template/card') %>
+    </template>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/consumo-api.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/inicio.js"></script>
+</body>
+</html>
